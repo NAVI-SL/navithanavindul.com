@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Portfolio | Alex Cipher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="canvas-bg"></canvas>
+
+    <div class="content-wrapper">
+        <nav>
+            <div class="logo"><a href="#home">◈ Navi</a></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="status-badge">Available for Freelance</div>
+                <h1>Navitha Navindul</h1>
+                <p class="hero-subtitle">Frontend Developer • Creative Coder • Digital Artist</p>
+                <p class="typing-text" id="typing-text">Crafting immersive digital experiences...<span class="typing-cursor"></span></p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="cyber-btn">Hire Me</a>
+                    <a href="#projects" class="cyber-btn cyber-btn-secondary">View Work</a>
+                </div>
+                <div class="scroll-indicator"></div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="8">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">Awards Won</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <h2 class="section-title">ABOUT_ME</h2>
+            <p class="section-subtitle">Passionate developer turning ideas into pixel-perfect reality</p>
+            
+            <div class="about-grid">
+                <div class="glass-card">
+                    <div class="about-text">
+                        <p>
+                            I'm a <span class="highlight">Frontend Developer</span> with 8+ years of experience 
+                            crafting beautiful, performant web applications. I specialize in creating 
+                            <span class="highlight">immersive digital experiences</span> that seamlessly blend 
+                            aesthetics with functionality.
+                        </p>
+                        <p>
+                            My expertise spans modern JavaScript frameworks, responsive design, and 
+                            <span class="highlight">creative coding</span>. I'm passionate about pushing the 
+                            boundaries of web technology to create experiences that users remember.
+                        </p>
+                        <p>
+                            When I'm not coding, you'll find me exploring the latest design trends, 
+                            contributing to open-source projects, or experimenting with 
+                            <span class="highlight">generative art and WebGL</span>.
+                        </p>
+                    </div>
+
+                    <div class="skills-section">
+                        <h3 style="color: var(--neon-cyan); margin-bottom: 1.5rem; font-size: 1.5rem;">Technical Arsenal</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>HTML5 / CSS</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>JavaScript / TypeScript</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Figma</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="92"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>UI/UX Design</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Three.js / WebGL</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Figma</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-fill" data-width="80"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card">
+                    <h3 style="color: var(--neon-cyan); margin-bottom: 2rem; font-size: 1.5rem;">Career Journey</h3>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2022 - Present</div>
+                            <div class="timeline-title">Senior Frontend Developer</div>
+                            <div class="timeline-company">TechNova Solutions</div>
+                            <p style="color: rgba(255,255,255,0.6); margin-top: 0.5rem;">
+                                Leading frontend architecture for enterprise SaaS platforms, 
+                                implementing modern design systems and optimizing performance.
+                            </p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2019 - 2022</div>
+                            <div class="timeline-title">Frontend Developer</div>
+                            <div class="timeline-company">Digital Innovations Inc.</div>
+                            <p style="color: rgba(255,255,255,0.6); margin-top: 0.5rem;">
+                                Developed responsive web applications using React, implemented 
+                                CI/CD pipelines, and mentored junior developers.
+                            </p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2017 - 2019</div>
+                            <div class="timeline-title">Junior Web Developer</div>
+                            <div class="timeline-company">Creative Studios</div>
+                            <p style="color: rgba(255,255,255,0.6); margin-top: 0.5rem;">
+                                Built custom WordPress themes, landing pages, and interactive 
+                                web experiences for diverse clients.
+                            </p>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-year">2016</div>
+                            <div class="timeline-title">Computer Science Degree</div>
+                            <div class="timeline-company">Tech University</div>
+                            <p style="color: rgba(255,255,255,0.6); margin-top: 0.5rem;">
+                                Graduated with honors, specialized in web technologies and 
+                                human-computer interaction.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="section" style="background: rgba(0, 243, 255, 0.02);">
+            <h2 class="section-title">SERVICES</h2>
+            <p class="section-subtitle">Comprehensive solutions for your digital needs</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-desc">
+                        Custom web applications built with modern frameworks and best practices.
+                    </p>
+                    <ul class="service-features">
+                        <li>Responsive Design</li>
+                        <li>Progressive Web Apps</li>
+                        <li>E-commerce Solutions</li>
+                        <li>CMS Integration</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-desc">
+                        Beautiful, user-centered interfaces that enhance engagement and conversion.
+                    </p>
+                    <ul class="service-features">
+                        <li>Wireframing & Prototyping</li>
+                        <li>Design Systems</li>
+                        <li>User Research</li>
+                        <li>Accessibility Audit</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">⚡</div>
+                    <h3 class="service-title">Performance Optimization</h3>
+                    <p class="service-desc">
+                        Speed up your website and improve Core Web Vitals for better SEO and UX.
+                    </p>
+                    <ul class="service-features">
+                        <li>Code Splitting</li>
+                        <li>Image Optimization</li>
+                        <li>Lazy Loading</li>
+                        <li>Caching Strategies</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3 class="service-title">Interactive Experiences</h3>
+                    <p class="service-desc">
+                        Engaging 3D visualizations and animations using WebGL and Canvas API.
+                    </p>
+                    <ul class="service-features">
+                        <li>3D Graphics (Three.js)</li>
+                        <li>Data Visualization</li>
+                        <li>Scroll Animations</li>
+                        <li>Particle Effects</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">📱</div>
+                    <h3 class="service-title">Mobile Development</h3>
+                    <p class="service-desc">
+                        Cross-platform mobile apps with native-like performance and feel.
+                    </p>
+                    <ul class="service-features">
+                        <li>React Native</li>
+                        <li>Hybrid Apps</li>
+                        <li>Mobile-First Design</li>
+                        <li>App Store Deployment</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="service-title">Maintenance & Support</h3>
+                    <p class="service-desc">
+                        Ongoing support to keep your digital products running smoothly.
+                    </p>
+                    <ul class="service-features">
+                        <li>Bug Fixes</li>
+                        <li>Security Updates</li>
+                        <li>Feature Additions</li>
+                        <li>24/7 Monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title">PROJECTS</h2>
+            <p class="section-subtitle">A showcase of my latest work and creative experiments</p>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">🚀</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Cyber Dashboard Pro</h3>
+                        <p class="project-desc">
+                            A futuristic admin dashboard with real-time data visualization, 
+                            glassmorphism design, and advanced analytics capabilities.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">WebSocket</span>
+                            <span class="tag">Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🎮</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Neon Runner 3D</h3>
+                        <p class="project-desc">
+                            An interactive browser-based 3D game featuring cyberpunk aesthetics, 
+                            dynamic lighting, and physics-based gameplay mechanics.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Three.js</span>
+                            <span class="tag">WebGL</span>
+                            <span class="tag">GSAP</span>
+                            <span class="tag">Cannon.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Play Game</a>
+                            <a href="#" class="project-link">Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">💎</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Portfolio Studio</h3>
+                        <p class="project-desc">
+                            A creative portfolio platform with stunning scroll animations, 
+                            micro-interactions, and a fully customizable design system.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Framer Motion</span>
+                            <span class="tag">Tailwind</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Visit Site</a>
+                            <a href="#" class="project-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">🌐</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Neural Network Viz</h3>
+                        <p class="project-desc">
+                            Visual representation of AI neural networks with real-time particle 
+                            simulations and interactive node connections.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Canvas API</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">TensorFlow.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Demo</a>
+                            <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2 class="section-title">LET'S CONNECT</h2>
+            <p class="section-subtitle">Have a project in mind? Let's build something extraordinary together</p>
+            
+            <div class="glass-card contact-content">
+                <div class="contact-grid">
+                    <div class="contact-form">
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-textarea" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button class="cyber-btn" style="width: 100%;">Send Message</button>
+                    </div>
+
+                    <div class="contact-info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">📧</div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p>navithanavindul@gmail</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">📱</div>
+                            <div class="info-text">
+                                <h4>Phone</h4>
+                                <p>+94 (76) 765 4588</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <div class="info-text">
+                                <h4>Location</h4>
+                                <p>Kottawa,LK</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">⏰</div>
+                            <div class="info-text">
+                                <h4>Availability</h4>
+                                <p>Mon - Fri, 9AM - 6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/NAVI-SL" target="_blank" class="social-icon" title="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter/X">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:navithanavindul@gmail" class="social-icon" title="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="logo" style="font-size: 2rem; margin-bottom: 1rem;">◈ Navi</div>
+                <p class="footer-text">
+                    © 2026 Alex Cipher. All rights reserved. | Crafted with passion and code.
+                </p>
+                <p class="footer-text" style="margin-top: 0.5rem;">
+                    Available for freelance projects and collaborations
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
