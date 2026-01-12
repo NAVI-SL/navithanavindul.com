@@ -374,10 +374,56 @@ nav {
 /* About Section */
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 400px 1fr;
     gap: 3rem;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    align-items: start;
+}
+
+.profile-section {
+    position: sticky;
+    top: 120px;
+}
+
+.profile-image-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--neon-cyan);
+    box-shadow: 0 0 40px rgba(0, 243, 255, 0.3);
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.profile-image-container:hover .profile-image {
+    transform: scale(1.05);
+}
+
+.profile-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 243, 255, 0.2), transparent);
+    animation: rotate 10s linear infinite;
+    pointer-events: none;
+}
+
+.about-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .about-text {
@@ -985,22 +1031,6 @@ footer {
     }
 }
 
-@keyframes shimmer {
-    0% { left: -100%; }
-    100% { left: 100%; }
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 @keyframes scaleIn {
     from {
         opacity: 0;
@@ -1012,9 +1042,60 @@ footer {
     }
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+@keyframes glowPulse {
+    0%, 100% {
+        box-shadow: 0 0 40px rgba(0, 243, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 60px rgba(0, 243, 255, 0.6);
+    }
 }
 
-  
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image-container {
+        width: 100%;
+        height: 300px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
