@@ -365,3 +365,61 @@ document.querySelectorAll('.project-card, .service-card').forEach(card => {
 
 console.log('%c🚀 CYBER_DEV Portfolio Loaded', 'color: #00f3ff; font-size: 20px; font-weight: bold;');
 console.log('%cBuilt with passion and cyberpunk vibes 💜', 'color: #bd00ff; font-size: 14px;');
+
+// Add this to your script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById("contactForm");
+    
+    if (form) {
+        form.addEventListener("submit", async function(event) {
+            // 1. Stop the page from reloading
+            event.preventDefault();
+            
+            // 2. Get the button to change text/loading state
+            const button = form.querySelector('button[type="submit"]');
+            const originalText = button.innerText;
+            button.innerText = "Sending...";
+            button.disabled = true;
+
+            // 3. Collect the form data
+            const data = new FormData(event.target);
+
+            // 4. Send via fetch API to Formspree
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Success!
+                    button.innerText = "Message Sent!";
+                    form.reset();
+                    // Optional: Reset button text after 3 seconds
+                    setTimeout(() => {
+                        button.innerText = originalText;
+                        button.disabled = false;
+                    }, 3000);
+                } else {
+                    // Error from Formspree
+                    const data = await response.json();
+                    if (Object.hasOwn(data, 'errors')) {
+                        alert(data["errors"].map(error => error["message"]).join(", "));
+                    } else {
+                        alert("Oops! There was a problem submitting your form");
+                    }
+                    button.innerText = originalText;
+                    button.disabled = false;
+                }
+            } catch (error) {
+                // Network error
+                alert("Oops! There was a problem submitting your form");
+                button.innerText = originalText;
+                button.disabled = false;
+            }
+        });
+    }
+});
