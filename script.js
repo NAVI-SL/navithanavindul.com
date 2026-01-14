@@ -254,16 +254,28 @@ document.querySelectorAll('.section-title, .section-subtitle').forEach(el => {
 });
 
 // Form submission animation
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const btn = contactForm.querySelector('.cyber-btn');
         const originalText = btn.textContent;
         
+        // Get form data
+        const formData = new FormData(contactForm);
+        const data = {
+            name: formData.get('name'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message')
+        };
+        
+        console.log('Form Data:', data);
+        
         btn.textContent = 'Sending...';
         btn.style.pointerEvents = 'none';
         
+        // Simulate sending (replace with actual API call)
         setTimeout(() => {
             btn.textContent = 'Message Sent! ✓';
             btn.style.background = 'var(--neon-green)';
