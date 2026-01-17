@@ -294,27 +294,36 @@
             <h2 class="section-title">PROJECTS</h2>
             <p class="section-subtitle">A showcase of my latest work and creative experiments</p>
             
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="design">UI/UX</button>
+                <button class="filter-btn" data-filter="3d">3D/WebGL</button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">🌐</div>
+                <div class="project-card" data-category="web">
+                    <div class="project-image">🚀</div>
                     <div class="project-info">
-                        <h3 class="project-title">English to Sinhala Translator</h3>
+                        <h3 class="project-title">Cyber Dashboard Pro</h3>
                         <p class="project-desc">
                             A futuristic admin dashboard with real-time data visualization, 
                             glassmorphism design, and advanced analytics capabilities.
                         </p>
                         <div class="project-tags">
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">CSS</span>
+                            <span class="tag">React</span>
+                            <span class="tag">D3.js</span>
+                            <span class="tag">WebSocket</span>
+                            <span class="tag">Chart.js</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://tra-sigma.vercel.app/" target="_blank" class="project-link">Live Demo</a>
-                            <a href="https://github.com/NAVI-SL/English-to-Sinhala-translator.git" target="_blank" class="project-link">Code</a>
+                            <a href="#" class="project-link">Live Demo</a>
+                            <a href="#" class="project-link">Code</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="3d">
                     <div class="project-image">🎮</div>
                     <div class="project-info">
                         <h3 class="project-title">Neon Runner 3D</h3>
@@ -335,7 +344,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="design">
                     <div class="project-image">💎</div>
                     <div class="project-info">
                         <h3 class="project-title">Portfolio Studio</h3>
@@ -355,7 +364,7 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="web 3d">
                     <div class="project-image">🌐</div>
                     <div class="project-info">
                         <h3 class="project-title">Neural Network Viz</h3>
@@ -371,6 +380,107 @@
                         <div class="project-links">
                             <a href="#" class="project-link">Demo</a>
                             <a href="#" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">⚡</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Speed Metrics Analytics</h3>
+                        <p class="project-desc">
+                            Performance monitoring tool with beautiful visualizations, 
+                            insights dashboard, and automated reporting features.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Chart.js</span>
+                            <span class="tag">API</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View</a>
+                            <a href="#" class="project-link">Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="design">
+                    <div class="project-image">🎨</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Quantum Design System</h3>
+                        <p class="project-desc">
+                            Comprehensive component library with accessibility guidelines, 
+                            theming support, and extensive documentation.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Storybook</span>
+                            <span class="tag">TypeScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Explore</a>
+                            <a href="#" class="project-link">Docs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-image">🛒</div>
+                    <div class="project-info">
+                        <h3 class="project-title">E-Shop Platform</h3>
+                        <p class="project-desc">
+                            Full-featured e-commerce platform with payment integration, 
+                            inventory management, and customer analytics dashboard.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">Stripe</span>
+                            <span class="tag">MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Demo</a>
+                            <a href="#" class="project-link">Case Study</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="3d">
+                    <div class="project-image">🌌</div>
+                    <div class="project-info">
+                        <h3 class="project-title">Cosmic Explorer</h3>
+                        <p class="project-desc">
+                            Interactive 3D space exploration experience with realistic physics, 
+                            celestial bodies, and immersive sound design.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Three.js</span>
+                            <span class="tag">Shaders</span>
+                            <span class="tag">Web Audio</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Launch</a>
+                            <a href="#" class="project-link">About</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web design">
+                    <div class="project-image">📊</div>
+                    <div class="project-info">
+                        <h3 class="project-title">DataFlow Dashboard</h3>
+                        <p class="project-desc">
+                            Enterprise data visualization platform with drag-and-drop widgets, 
+                            custom reports, and team collaboration features.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Recharts</span>
+                            <span class="tag">GraphQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">Preview</a>
+                            <a href="#" class="project-link">Details</a>
                         </div>
                     </div>
                 </div>
