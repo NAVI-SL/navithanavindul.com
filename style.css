@@ -1,23 +1,58 @@
+/* RESET & DEFAULTS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* VARIABLES */
 :root {
     --void-black: #050505;
+    --text-color: #ffffff;
+    --text-muted: rgba(255, 255, 255, 0.7);
     --neon-cyan: #00f3ff;
     --neon-purple: #bd00ff;
     --neon-pink: #ff006e;
     --neon-green: #00ff9f;
     --glass-bg: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
+    --card-bg: rgba(255, 255, 255, 0.05);
 }
+
+
+/* GITHUB BUTTON */
+.nav-github-btn {
+    background: transparent;
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2rem;
+    transition: all 0.3s;
+    text-decoration: none;
+    padding: 0;
+}
+
+.nav-github-btn:hover {
+    background: var(--neon-cyan);
+    color: var(--void-black);
+    box-shadow: 0 0 15px var(--neon-cyan);
+    transform: translateY(-2px);
+}
+
+.nav-github-btn::after {
+    display: none; /* remove underline from typical links */
+}
+
 
 body {
     font-family: 'Rajdhani', sans-serif;
     background: var(--void-black);
-    color: #fff;
+    color: var(--text-color);
     overflow-x: hidden;
     position: relative;
 }
@@ -37,7 +72,7 @@ body {
     z-index: 1;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav {
     position: fixed;
     top: 0;
@@ -103,7 +138,7 @@ nav {
     text-shadow: 0 0 10px var(--neon-cyan);
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -328,7 +363,7 @@ nav {
     font-size: 1.1rem;
 }
 
-/* Section Styles */
+/* SECTION DEFAULTS */
 .section {
     padding: 6rem 5%;
     min-height: 100vh;
@@ -371,7 +406,7 @@ nav {
     box-shadow: 0 0 40px rgba(0, 243, 255, 0.2);
 }
 
-/* About Section */
+/* ABOUT SECTION */
 .about-grid {
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -644,7 +679,7 @@ nav {
     margin-right: 0.5rem;
 }
 
-/* Projects Section */
+/* PROJECTS SECTION */
 .projects-filter {
     display: flex;
     justify-content: center;
@@ -1135,3 +1170,9 @@ footer {
         transform: translateY(-20px);
     }
 }
+
+
+
+
+
+

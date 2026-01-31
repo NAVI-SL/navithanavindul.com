@@ -1,4 +1,9 @@
-// Enhanced Canvas Background - Connecting Dots Network
+/**
+ * PORTFOLIO SCRIPT
+ * Handles animations, interactions, and canvas effects.
+ */
+
+// CANVAS BACKGROUND
 const canvas = document.getElementById('canvas-bg');
 const ctx = canvas.getContext('2d');
 
@@ -100,7 +105,7 @@ window.addEventListener('resize', () => {
     canvas.height = window.innerHeight;
 });
 
-// Typing animation
+// TYPING ANIMATION
 const phrases = [
     'Crafting immersive digital experiences...',
     'Building the future of the web...',
@@ -140,35 +145,9 @@ function typeText() {
 typeText();
 
 // Counter animation
-const counters = document.querySelectorAll('.stat-number');
-const speed = 200;
 
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const target = +entry.target.getAttribute('data-target');
-            const increment = target / speed;
-            let current = 0;
 
-            const updateCounter = () => {
-                current += increment;
-                if (current < target) {
-                    entry.target.textContent = Math.ceil(current);
-                    setTimeout(updateCounter, 10);
-                } else {
-                    entry.target.textContent = target + '+';
-                }
-            };
-
-            updateCounter();
-            counterObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-
-counters.forEach(counter => counterObserver.observe(counter));
-
-// Skill bar animation
+// SKILL BAR ANIMATION
 const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -188,7 +167,6 @@ const aboutSection = document.querySelector('#about');
 if (aboutSection) skillObserver.observe(aboutSection);
 
 // Project filter animation
-
 
 // Smooth scrolling with active state
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -211,7 +189,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Scroll reveal animation
+// SCROLL REVEAL
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -100px 0px'
@@ -230,7 +208,7 @@ document.querySelectorAll('.section-title, .section-subtitle').forEach(el => {
     scrollObserver.observe(el);
 });
 
-// Form submission animation
+// CONTACT FORM
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -269,7 +247,7 @@ if (contactForm) {
     });
 }
 
-// Active nav link on scroll
+// NAVIGATION ACTIVE STATE
 window.addEventListener('scroll', () => {
     const sections = document.querySelectorAll('section[id]');
     const scrollY = window.pageYOffset;
@@ -343,7 +321,7 @@ document.querySelectorAll('.project-card, .service-card').forEach(card => {
 console.log('%c🚀 CYBER_DEV Portfolio Loaded', 'color: #00f3ff; font-size: 20px; font-weight: bold;');
 console.log('%cBuilt with passion and cyberpunk vibes 💜', 'color: #bd00ff; font-size: 14px;');
 
-// Add this to your script.js
+// FORM SUBMISSION HANDLER
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById("contactForm");
     
@@ -399,4 +377,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
 });
