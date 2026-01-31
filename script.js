@@ -188,30 +188,7 @@ const aboutSection = document.querySelector('#about');
 if (aboutSection) skillObserver.observe(aboutSection);
 
 // Project filter animation
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
 
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-
-        const filter = btn.getAttribute('data-filter');
-
-        projectCards.forEach((card, index) => {
-            card.style.animation = 'none';
-            
-            setTimeout(() => {
-                if (filter === 'all' || card.getAttribute('data-category').includes(filter)) {
-                    card.style.display = 'block';
-                    card.style.animation = `fadeInUp 0.6s ${index * 0.1}s both`;
-                } else {
-                    card.style.display = 'none';
-                }
-            }, 50);
-        });
-    });
-});
 
 // Smooth scrolling with active state
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
